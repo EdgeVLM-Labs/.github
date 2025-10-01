@@ -1,14 +1,20 @@
-## Motivation
-Is your request related to a problem or workflow challenge?
+---
+name: Feature request
+about: Suggest an idea for this project
+title: ''
+labels: ''
+assignees: ''
 
-## Proposed Solution
-Describe the feature or improvement you would like.
+---
 
-## Alternatives
-List any alternative approaches or workarounds you’ve considered.
+**Is your feature request related to a problem? Please describe.**
+A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
 
-## Impact
-How would this improve the project (e.g., usability, performance, deployment)?
+**Describe the solution you'd like**
+A clear and concise description of what you want to happen.
 
-## Additional Context
-Screenshots, references, or links that support the idea.
+**Describe alternatives you've considered**
+A clear and concise description of any alternative solutions or features you've considered.
+
+**Additional context**
+Add any other context or screenshots about the feature request here.
