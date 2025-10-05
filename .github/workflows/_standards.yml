@@ -1,0 +1,32 @@
+name: Standards (pre-commit)
+on:
+  workflow_call:
+    inputs:
+      canonical_ref:
+        description: "Tag/branch of standards to verify against"
+        required: false
+        type: string
+        default: "v1.0.0"
+
+jobs:
+  standards:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Verify against canonical standards
+        run: |
+          bash <(curl -sSL https://raw.githubusercontent.com/EdgeVLM-Labs/standards/main/tools/verify_canonical.sh) "${{ inputs.canonical_ref }}"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install pre-commit
+        run: pip install -U pre-commit
+
+      - name: Run pre-commit on all files
+        run: pre-commit run --all-files
